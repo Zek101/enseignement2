@@ -31,7 +31,7 @@
 			Click to get Flash Player<br />
 			<a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a>
 			</p>
-			<p>or try to enable JavaScript and reload the page</p>
+			<p>or try to enable JavaScript and reload the page.</p>
 		</div>
 </div>
 </center>
