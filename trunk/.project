@@ -37,12 +37,12 @@
 		<link>
 			<name>RYC-WebContent</name>
 			<type>2</type>
-			<location>C:/Users/administrateur/workspace/ReformYourCountry/WebContent</location>
+			<locationURI>WORKSPACE_LOC/ReformYourCountry/WebContent</locationURI>
 		</link>
 		<link>
 			<name>RYC-src</name>
 			<type>2</type>
-			<location>C:/Users/administrateur/workspace/ReformYourCountry/src</location>
+			<locationURI>WORKSPACE_LOC/ReformYourCountry/src</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
