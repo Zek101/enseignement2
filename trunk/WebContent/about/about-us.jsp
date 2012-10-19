@@ -33,7 +33,7 @@ Nous ne sommes tenu à défendre aucun intérêt particulier: classe politique, 
 Si, dans notre quête, nous pouvons les épargner, tant mieux. Par contre, si l’un d’entre eux empêche l’intérêt général pour se protéger, nous le dénoncerons sans crainte.
 </p>
 <p>
-Au delà de la création du site et de son contenu de base, nous invitons tous ceux qui se sentent concernés, à LINK XXXXXXXXXXXXXXXXXXparticiper/LINK au contenu, de manière anonyme ou pas.
+Au delà de la création du site et de son contenu de base, nous invitons tous ceux qui se sentent concernés, à <a href="/about/contribuer.jsp">participer</a> au contenu, de manière anonyme ou pas.
 </p>
 <p><a href= "/contact">Une page</a> permet de nous contacter.</p>
 <p>La mission que nous nous sommes donnée est de faire en sorte d’améliorer le système scolaire de la Belgique francophone, c’est à dire augmenter:</p>
