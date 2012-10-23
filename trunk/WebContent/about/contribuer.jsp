@@ -25,7 +25,7 @@ sur <a href="http://www.youtube.com/user/enseignement2">youtube</a> en cliquant 
 <img src="/images/Mobile-Commerce2.jpg" class="realshadow center-align"/>
 
 <p>
-D’autres tâches sont plus lourdes et nécessitent de <a href="/contact">nous contacter</a>. Voici les rôles/tâches typique de contributeurs d’enseignement2.be:
+D’autres tâches sont plus lourdes et nécessitent de <a href="/contact">nous contacter</a>. Voici les rôles/tâches typique de contributeurs bénévoles d’enseignement2.be:
 </p>
 <ul class="list">
 <li>
@@ -36,6 +36,11 @@ D’autres tâches sont plus lourdes et nécessitent de <a href="/contact">nous 
 </li>
 <li>
 <b>Programmation</b>:<a href="http://www.google.com"> un projet open-source</a> a spécialement été créé pour ce site par des bénévoles. Vous pouvez mettre vos compétences de programmation Java/JavaScript ou votre sensibilité artistique html/CSS en valeur pour une bonne cause.
+</li>
+<li>
+<b>Vidéos:</b> Nous produisons des vidéos interpellantes et humoristiques en rapport avec les articles de ce site. Nous recherchons des 
+acteurs pour jouer des enseignants, des ados ou des enfants. Si vous avez des talents de réalisateurs, vous pouvez aussi monter votre propre
+équipe et nous proposer une vidéo. Si vous êtes enseignant et désirez organiser la réalisation d'une telle vidéo dans votre école, nous mettrons un soin particulier à vous aider.
 </li>
 </ul>
 <img src="/images/flower.png" class="realshadow center-align"/>
