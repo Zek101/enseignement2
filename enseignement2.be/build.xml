@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project>
+<project name="enseignement2.be" default="war" basedir=".">
+
+    <property file="build.properties" />
+    <!-- property for accessing system variable -->
+    <property environment="env" />
+
+    <taskdef resource="net/sf/antcontrib/antcontrib.properties">
+        <classpath>
+            <pathelement location="extlib/ant-contrib-0.6.jar"/>
+        </classpath>
+    </taskdef>
+
+    <path id="classpath">
+    	<!-- we add teh reformYourCountry libs -->
+    	<fileset dir="${RYC_lib.dir}/lib">
+    	            <include name="**/*.jar" />
+    	</fileset>
+        <fileset dir="${lib.dir}">
+            <include name="**/*.jar" />
+        </fileset>
+        <fileset dir="${env.TOMCAT_HOME}/lib">
+            <include name="*.jar" />
+        </fileset>
+    </path>
+
+    <!-- convert classpath to a flat list/string for use in debug task -->
+    <pathconvert property="mf.classpath" pathsep=";">
+        <path refid="classpath" />
+        <flattenmapper />
+    </pathconvert>
+
+    <target name="init" description="get timestamp and create the dir where the compiled classes would be drop in" depends="clean">
+        <fail message="Property type must be defined" unless="type" />
+        <tstamp />
+        <mkdir dir="${build.dir}" />
+        <if>
+            <equals arg1="${type}" arg2="PROD" />
+            <then>
+                <property name="war.name" value="ROOT" />
+            </then>
+            <elseif>
+                <equals arg1="${type}" arg2="DEV" />
+                <then>
+                    <property name="war.name" value="${app.name}" />
+                </then>
+            </elseif>
+        </if>
+    </target>
+
+
+
+    <target name="set-properties" depends="init" description="Set properties to the appropiate values depending of the mode and the version">
+    </target>
+
+    <target name="compile" description="compile the source and without test classes" depends="set-properties">
+        <echo message="Building ${app.name} ..." />
+    	<javac srcdir="${RYC_src.dir}" destdir="${build.dir}" debug="on" classpathref="classpath" />
+        <javac srcdir="${src.dir}" destdir="${build.dir}" debug="on" classpathref="classpath" />
+    </target>
+
+    <target name="war" depends="compile">
+        <echo message="Making war file ..." />
+        <copy todir="${build.dir}" includeEmptyDirs="no">
+            <!-- because xml and properties aren't already in the build.dir because javac doesn't seem to make this-->
+            <fileset dir="${RYC_src.dir}">
+                <patternset>
+                    <include name="**/*.properties"/>
+                    <include name="**/*.xml"/>
+                </patternset>
+            	</fileset>
+            <fileset dir="${src.dir}">
+                <patternset>
+                    <include name="**/*.properties"/>
+                    <include name="**/*.xml"/>
+                </patternset>
+             </fileset>
+        </copy>
+        <!-- need to replace secret.properties by prod.properties directly in the build dir because it seem that if we replace the file in scr.dir the file who's copied after in the build classes is the original -->
+        <if>
+            <equals arg1="${type}" arg2="PROD" />
+            <then>
+                <copy file="${build.dir}/secret.properties" tofile="${build.dir}/secret.properties.back" overwrite="true"/>
+                <copy file="../../prod.properties" tofile="${build.dir}/secret.properties" overwrite="true"/>
+            </then>
+        </if>
+        <mkdir dir="${dist.dir}"/>
+        <war destfile="${dist.dir}/${war.name}.war" webxml="${RYC_web.dir}/WEB-INF/web.xml">
+            <fileset dir="${RYC_web.dir}"/>
+        	<lib dir="${RYC_lib.dir}"/>
+            <lib dir="${lib.dir}"/>
+            <classes dir="${build.dir}"/>
+        </war>
+    </target>
+
+    <target name="clean" description="remove build dir">
+        <echo message="cleanings..."/>
+        <delete dir="${build.dir}" />
+        <delete dir="${dist.dir}"/>
+    </target>
+
+    <target name="debug" description="Lists the properties for debugging purposes">
+        <echo message="Lists the properties for debugging purposes ..." />
+        <echo message="ant.version                    = ${ant.version}" />
+        <echo message="ant.home                       = ${ant.home}" />
+        <echo message="java.home                      = ${env.JAVA_HOME}" />
+        <echo message="" />
+        <echo message="type                           = ${type}" />
+        <echo message="version                        = ${version}" />
+        <echo message="app.name                       = ${app.name}" />
+        <echo message="basedir                        = ${basedir}" />
+        <echo message="lib.dir                        = ${lib.dir}" />
+        <echo message="build.dir                      = ${build.dir}" />
+        <echo message="classpath                      = ${mf.classpath}" />
+    </target>
+
+</project>
