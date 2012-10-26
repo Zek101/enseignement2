@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project>
+<project basedir=".">
+	<import file="../ReformYourCountry/src/buildTwoProjects.xml"/>
+</project>
