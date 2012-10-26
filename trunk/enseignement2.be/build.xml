@@ -89,9 +89,9 @@
             </then>
         </if>
         <mkdir dir="${dist.dir}"/>
-        <war destfile="${dist.dir}/${war.name}.war" webxml="${RYC_web.dir}/WEB-INF/web.xml">
-            <fileset dir="${web.dir}"/>
+        <war destfile="${dist.dir}/${war.name}.war" webxml="${RYC_web.dir}/WEB-INF/web.xml" >
             <fileset dir="${RYC_web.dir}"/>
+            <fileset dir="${web.dir}"/>
         	<lib dir="${RYC_lib.dir}"/>
             <lib dir="${lib.dir}"/>
             <classes dir="${build.dir}"/>
