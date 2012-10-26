@@ -70,12 +70,15 @@
                     <include name="**/*.xml"/>
                 </patternset>
             	</fileset>
-            <fileset dir="${src.dir}">
-                <patternset>
-                    <include name="**/*.properties"/>
-                    <include name="**/*.xml"/>
-                </patternset>
-             </fileset>
+        </copy>
+        <copy todir="${build.dir}" includeEmptyDirs="no" overwrite="true">
+		<!-- Need another copy tag to overwrite the src-->
+	        <fileset dir="${src.dir}">
+	            <patternset>
+	                <include name="**/*.properties"/>
+	                <include name="**/*.xml"/>
+	            </patternset>
+	         </fileset>
         </copy>
         <!-- need to replace secret.properties by prod.properties directly in the build dir because it seem that if we replace the file in scr.dir the file who's copied after in the build classes is the original -->
         <if>
