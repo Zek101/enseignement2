@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE project>
-<project name="enseignement2.be" default="war" basedir=".">
+<project default="war" basedir=".">
 
     <property file="build.properties" />
     <!-- property for accessing system variable -->
@@ -15,7 +15,7 @@
     <path id="classpath">
     	<!-- we add teh reformYourCountry libs -->
     	<fileset dir="${RYC_lib.dir}">
-    	            <include name="**/*.jar" />
+    	    <include name="**/*.jar" />
     	</fileset>
         <fileset dir="${lib.dir}">
             <include name="**/*.jar" />
@@ -43,7 +43,7 @@
             <elseif>
                 <equals arg1="${type}" arg2="DEV" />
                 <then>
-                    <property name="war.name" value="${app.name}" />
+                    <property name="war.name" value="${ant.project.name}" />
                 </then>
             </elseif>
         </if>
@@ -55,7 +55,7 @@
     </target>
 
     <target name="compile" description="compile the source and without test classes" depends="set-properties">
-        <echo message="Building ${app.name} ..." />
+        <echo message="Building ${ant.project.name} ..." />
     	<javac srcdir="${RYC_src.dir}" destdir="${build.dir}" debug="on" classpathref="classpath" />
         <javac srcdir="${src.dir}" destdir="${build.dir}" debug="on" classpathref="classpath" />
     </target>
@@ -108,7 +108,7 @@
         <echo message="" />
         <echo message="type                           = ${type}" />
         <echo message="version                        = ${version}" />
-        <echo message="app.name                       = ${app.name}" />
+        <echo message="name                           = ${ant.project.name}" />
         <echo message="basedir                        = ${basedir}" />
         <echo message="lib.dir                        = ${lib.dir}" />
         <echo message="build.dir                      = ${build.dir}" />
