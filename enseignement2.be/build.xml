@@ -90,6 +90,7 @@
         </if>
         <mkdir dir="${dist.dir}"/>
         <war destfile="${dist.dir}/${war.name}.war" webxml="${RYC_web.dir}/WEB-INF/web.xml">
+            <fileset dir="${web.dir}"/>
             <fileset dir="${RYC_web.dir}"/>
         	<lib dir="${RYC_lib.dir}"/>
             <lib dir="${lib.dir}"/>
