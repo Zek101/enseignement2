@@ -14,7 +14,7 @@
 
     <path id="classpath">
     	<!-- we add teh reformYourCountry libs -->
-    	<fileset dir="${RYC_lib.dir}/lib">
+    	<fileset dir="${RYC_lib.dir}">
     	            <include name="**/*.jar" />
     	</fileset>
         <fileset dir="${lib.dir}">
