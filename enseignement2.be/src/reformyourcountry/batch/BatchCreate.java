@@ -19,7 +19,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import reformyourcountry.exception.InvalidPasswordException;
-import reformyourcountry.exception.SocialAccountAlreadyExistException;
 import reformyourcountry.exception.UserAlreadyExistsException;
 import reformyourcountry.exception.UserLockedException;
 import reformyourcountry.exception.UserNotFoundException;
@@ -34,6 +33,7 @@ import reformyourcountry.model.Comment;
 import reformyourcountry.model.Group;
 import reformyourcountry.model.GroupReg;
 import reformyourcountry.model.User;
+import reformyourcountry.model.User.AccountConnectedType;
 import reformyourcountry.model.User.AccountStatus;
 import reformyourcountry.model.User.Gender;
 import reformyourcountry.model.User.Role;
@@ -162,10 +162,10 @@ public class BatchCreate implements Runnable {
 	// }
 	public void loginUser(User user) {
 		try {
-			loginService.login(user.getUserName(), "secret", false,user.getId());
+			loginService.login(user.getUserName(), "secret", false,user.getId(), AccountConnectedType.LOCAL);
 		} catch (UserNotFoundException | InvalidPasswordException
 				| UserNotValidatedException | UserLockedException
-				| WaitDelayNotReachedException | SocialAccountAlreadyExistException e) {
+				| WaitDelayNotReachedException e) {
 			throw new RuntimeException(e);
 		}
 
