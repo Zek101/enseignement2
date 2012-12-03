@@ -3,7 +3,7 @@
 SET EXE_LOCATION="C:\Program Files (x86)"\PuTTY
 SET DEST_FOLDER=.
 SET BACKUP_FOLDER=/opt/RYC_Maintenance/backup/gen
-SET BACKUP_FILE=last.tar.xz
+SET BACKUP_FILE=last-gen.tar.xz
 SET USER=e2admin
 SET HOST=enseignementdeux.be
 	
