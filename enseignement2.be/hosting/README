@@ -1,9 +1,54 @@
-this folder contains ressource and files to host ryc on your server
+this folder contains ressources and files to host ryc on your server
 
-folder conf.d
 
-  this folder contains the configuration files for apache to witch to dep mode or prod .
-  theze files must be put on your own conf.d in apache webserver config repertory (by default in /etc/http/conf.d)
+Architecture
+============
+enseignement2.be is hosted with an httpd (Apache) instance in front of the Tomcat server.
+It enables:
+ - a nice deployment html page (/var/www/html/deployment.html) to be displayed during redeploys,
+ - the user generated (uploaded) content (such as user profile images) to be located outside of
+   the tomcat webapp ROOT directory (which is deleted during every deployment).
+   That content is kept in /var/www/html/gen and directly served by httpd.
+
+SCRIPTS
+=======
+
+The /opt/RYC_Maintenance/ directory contains scripts and backups.
+This folder must be put in /opt (otherwise you must change the BASE_FOLDER var in maintenance.sh and bin/config).
+
+The main script is maintenance.sh. Its argument tells the action to perform (deploy, backup, restore, ...) as described further.
+That script use variables defined in ./bin/config and bash functions defined in other files from the ./bin directory.
+
+   
+HTTPD
+=====
+
+The main configuration file is in /etc/httpd/conf/httpd.conf.
+It refers all the *.conf file in /etc/httpd/conf.d/ directory.
+The most important file is /etc/httpd/conf.d/enseignement2.conf
+It has two versions:
+ - enseignement2.conf.prod which redirect most requests (except /gen) to tomcat.
+ - enseignement2.conf.dep which redirects all requests to the deployment.html page.
+When switching between deployment and prod, enseignement2.conf is replaced by one of these 2 files.
+It is done with the script
+   maintenance.sh switch_httpd dep
+or maintenance.sh switch_httpd prod
+The switches are automatically done during the deploy script.
+ 
+GEN
+===
+
+where, backups, restore script on PC...
+
+DB
+==
+
+backup, restore script on PC,...
+
+
+
+
+................................
 
 folder deployment page
 
@@ -13,7 +58,7 @@ folder deployment page
 
 folder RYC_MAINTENANCE
   
-  contains scripts. this folder must be put in /opt (otherwise you must change the BASE_FOLDER var in maintenance.sh and bin/config)
+  
 
 file environment
 
