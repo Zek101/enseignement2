@@ -1,0 +1,52 @@
+#!/bin/bash
+
+APP_DIR_NAME=$APP_NAME
+APP_SVN_PATH=trunk/$APP_NAME
+
+FRAMEWORK_DIR_NAME=$FRAMEWORK_NAME
+FRAMEWORK_SVN_PATH=trunk/$FRAMEWORK_NAME
+
+ensureFolderExists $BUILD_FOLDER
+ensureFolderExists $BACKUP_FOLDER/oldwars
+
+cd $BUILD_FOLDER
+
+function backupOldWar(){
+  cp -i $WEBAPPS_FOLDER/ROOT.war $BACKUP_FOLDER/oldwars/$OLD_WAR_COPY_NAME
+  rotateBackup oldwars
+}
+function checkout(){
+  mkdir $1
+  cd $1
+  svn checkout $2 .
+}
+function update(){
+  cd $1
+  svn revert -R . && svn update
+}
+function buildWar(){
+  backupOldWar
+  cd $BUILD_FOLDER/$1
+  ant -Dant.project.name=$1 -Dtype=$2 war
+}
+function checkout_build(){
+  #first we checkout or update the RYC framework sourcecode
+  echo "update "$FRAMEWORK_NAME"..."
+  if [ -d "./$FRAMEWORK_DIR_NAME" ] ; then
+    update $FRAMEWORK_DIR_NAME
+  else 
+    checkout $FRAMEWORK_DIR_NAME $FRAMEWORK_SVN_ADRESS/$FRAMEWORK_SVN_PATH
+  fi
+  cd $BUILD_FOLDER
+
+  #second we do the same with the app
+  echo "update "$APP_NAME"..."
+  if [ -d "./$APP_DIR_NAME" ] ; then
+    update $APP_DIR_NAME
+  else 
+    checkout $APP_DIR_NAME $APP_SVN_ADRESS/$APP_SVN_PATH
+  fi
+
+  #third we build the app
+  buildWar $APP_DIR_NAME $APP_ENV
+}

@@ -1,0 +1,43 @@
+
+<VirtualHost 68.169.61.167:80>
+        ServerName enseignement2.be
+        DocumentRoot /var/www/hagakure/data/www/
+        SuexecUserGroup hagakure hagakure 
+        CustomLog /var/www/httpd-logs/enseignement2.be.access.log combined
+        ErrorLog /var/www/httpd-logs/enseignement2.be.error.log
+        ServerAlias *.enseignement2.be www.enseignement2.be
+        AddDefaultCharset UTF-8
+
+# enable expirations
+        ExpiresActive On
+# expire GIF,JPEG,PNG images after a month in the client's cache
+        ExpiresByType image/gif A2592000
+        ExpiresByType image/jpeg A2592000
+        ExpiresByType image/png A2592000
+
+        ExpiresByType application/javascript A2592000
+        ExpiresByType text/css A2592000
+
+
+        RewriteEngine on
+        
+        RewriteCond %{HTTP_HOST} ^(.+)\.enseignement(2|deux)\.be [NC] # only if there is something (at lease 1 char) before the first dot. example: toto.enseignement2.be
+        RewriteRule     ^(.*)?$ http://enseignement2.be$1 [redirect=301,nocase]
+
+        RewriteCond %{HTTP_HOST} ^enseignementdeux\.be [NC] # only if this is enseignementdeux.be
+        RewriteRule     ^(.*)?$ http://enseignement2.be$1 [redirect=301,nocase]
+
+        RewriteRule     ^/deployment\.html$ / [L,NC,QSA,R=301] #redirect deployment.html to home page .We don't to leave the user in deployment.html because he would not be noticed when the site is back again. see http://stackoverflow.com/questions/12710596
+
+# Directives for eApps applications dependent on Apache
+        ProxyPass /manager/ispmgr !
+        ProxyPass /manimg !
+        ProxyPass /mancgi !
+        ProxyPass /webmail !
+        ProxyPass /joomla !
+        ProxyPass /awstats !
+        ProxyPass /myadmin !
+# Directives for your application
+        ProxyPass / ajp://localhost:8009/
+        ProxyPassReverse / ajp://localhost:8009/
+</VirtualHost>

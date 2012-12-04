@@ -1,0 +1,38 @@
+function assertFolderExists(){
+  if [ ! -d "$1" ]; then	
+    echo $1" directory is empty "
+    exit 4
+  fi
+}
+function ensureFolderExists(){
+  if [ ! -d "$1" ]; then	
+    mkdir $1
+  fi
+}
+function assertFileExists(){
+  if [ ! -f "$1" ]; then	
+    echo $1" doesn't exists"
+    exit 4
+  fi
+}
+function ensureFileExists(){
+  if [ ! -f "$1" ]; then	
+    touch $1
+  fi
+}
+#Smart file remove.
+function rotateBackup(){
+
+        assertFolderExists $BACKUP_FOLDER/$1
+        cd $BACKUP_FOLDER/$1
+        #because the expression is eval when the variable is declared
+        BACKUP_COUNT=$(ls | wc -l) #Amount of files already in that dir.
+        fileToRemoveNumber=$(($BACKUP_COUNT - $BACKUPS_TO_KEEP))
+        # if there are too many old backups, we delete some files
+        if [ $fileToRemoveNumber -gt 0 ] ; then
+                fileToRemoveNumber=$(($BACKUP_COUNT - $BACKUPS_TO_KEEP))
+                rm -vf $(ls -tr | head -n $fileToRemoveNumber) #list file by mod time oldest first and remove X file
+        else
+                echo "no $1 backup to remove"
+        fi
+}

@@ -1,0 +1,18 @@
+<VirtualHost 68.169.61.167:80>
+        ServerName enseignement2.be
+        ServerAlias *.enseignement2.be www.enseignement2.be
+
+        DocumentRoot /var/www/hagakure/data/www/
+        SuexecUserGroup hagakure hagakure 
+
+        CustomLog /var/www/httpd-logs/enseignement2.be.access.log combined
+        ErrorLog /var/www/httpd-logs/enseignement2.be.error.log
+        
+        AddDefaultCharset UTF-8
+
+        RewriteEngine on
+
+#redirect all URL to deployment page
+        RewriteCond %{REQUEST_URI} !/deployment.*$
+        RewriteRule $ /deployment.html [R=302,L]
+</VirtualHost>
