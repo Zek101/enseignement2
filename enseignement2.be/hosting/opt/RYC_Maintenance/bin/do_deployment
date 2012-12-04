@@ -1,0 +1,8 @@
+#!bin/bash
+
+function do_deployment(){
+  #remove all in ROOT dir except gen folder
+  service tomcat7 stop
+  rm -rvf $WEBAPPS_FOLDER/ROOT*  
+  cp -vf $BUILD_FOLDER/$APP_NAME/dist/ROOT.war $WEBAPPS_FOLDER
+}

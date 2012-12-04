@@ -1,0 +1,20 @@
+this folder contains ressource and files to host ryc on your server
+
+folder conf.d
+
+  this folder contains the configuration files for apache to witch to dep mode or prod .
+  theze files must be put on your own conf.d in apache webserver config repertory (by default in /etc/http/conf.d)
+
+folder deployment page
+
+  this folder contains the deployment page to be show when apache webserver is in deployment mode
+  put theze file in the root of your apache webserver www content.
+  You must replace all value in prod.properties with your own configuration value
+
+folder RYC_MAINTENANCE
+  
+  contains scripts. this folder must be put in /opt (otherwise you must change the BASE_FOLDER var in maintenance.sh and bin/config)
+
+file environment
+
+  put the content of this file int your own /etc/environment or just copy the file if you haven't already one.
