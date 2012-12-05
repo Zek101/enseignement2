@@ -68,6 +68,16 @@ Restore backups on developer's PC
 ....
 
 
+Properties
+==========
+The /opt/RYC_Maintenance/conf.properties will replace the enseignement2/src/secret.properties file during the packaging (ant tasks).
+It contains the DB password and other sensible data that should not be in the open-source SVN with the source code.
+
+
+Ant build
+=========
+
+
 
 ................................
 
