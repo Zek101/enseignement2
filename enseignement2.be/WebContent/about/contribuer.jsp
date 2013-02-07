@@ -44,7 +44,8 @@ acteurs pour jouer des enseignants, des ados ou des enfants. Si vous avez des ta
 </li>
 </ul>
 
-Les contributeurs sont invités à partager leurs idées sur <a href="https://groups.google.com/forum/#!forum/enseignement2-contributeurs" target="_blank" title="forum google où les contributeurs peuvent partager et débattre des idées sur la confection et l'amélioration des articles">ce forum</a>.
+Les contributeurs sont invités à partager leurs idées sur <a href="https://groups.google.com/forum/#!forum/enseignement2-contributeurs" target="_blank" title="forum google où les contributeurs peuvent partager et débattre des idées sur la confection et l'amélioration des articles">ce forum</a>,
+comme montré dans <a href="http://youtu.be/nGjQGbBboss" target="_blank">cette vidéo</a>.
 
 
 <img src="/images/flower.png" class="center-align"/>
