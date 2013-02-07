@@ -24,7 +24,7 @@ Depuis des années, la plupart des acteurs de l’enseignement (ministres, pouvo
 <p>
 Ce site a été créé pour susciter des débats utiles, porteurs de changements. Il structure l’information en 3 couches:
 </p>
-<div class="center-align"><img src="/images/iceberg.jpg" class="realshadow"/></div>
+<div class="center-align"><img src="/images/iceberg.jpg" class="image-frame" /></div>
 <p>
 Cet iceberg représente l’information disponible ici. Le grand public n’a le temps de regarder que la partie émergée: de courtes vidéos dont la vocation est d’interpeler sur des dysfonctionnements.
 </p>

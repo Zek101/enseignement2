@@ -5,8 +5,7 @@
 <%@ taglib tagdir="/WEB-INF/tags/ryctag/" prefix="ryctag"%>
 <html>
 <body>
-     <ryctag:pageheadertitle title="Comment contribuer?"> 
-    </ryctag:pageheadertitle> 
+<ryctag:pageheadertitle title="Comment contribuer?"/> 
 <p>
 Aimeriez-vous contribuer à ce site? Vous êtes le bienvenu. Certaines contributions peuvent être apportées directement sur le site; il suffit d’avoir créé un utilisateur et d’être connecté.
 </p>
@@ -17,12 +16,12 @@ Aimeriez-vous contribuer à ce site? Vous êtes le bienvenu. Certaines contribut
 <li>
 <b>Diffusion</b>: N’hésitez pas à inviter vos connaissances, parents et enseignants, à s’informer et à donner leur avis ici. Vous pouvez le faire oralement ou via internet:
 sur enseignement2.be, en cliquant le bouton “j’aime” d’un article,
-sur <a href="http://www.youtube.com/user/enseignement2">youtube</a> en cliquant sur le bouton “j’aime” de nos vidéos.
+sur youtube en cliquant sur le bouton “j’aime” de <a href="http://www.youtube.com/user/enseignement2">nos vidéos</a>.
 </li>
 </ul>
 
 
-<img src="/images/Mobile-Commerce2.jpg" class="center-align"/>
+<div class="center-align"><img src="/images/Mobile-Commerce2.jpg" class="image-frame"/></div>
 
 <p>
 D’autres tâches sont plus lourdes et nécessitent de <a href="/contact">nous contacter</a>. Voici les rôles/tâches typique de contributeurs bénévoles d’enseignement2.be:
@@ -44,12 +43,11 @@ acteurs pour jouer des enseignants, des ados ou des enfants. Si vous avez des ta
 </li>
 </ul>
 
-Les contributeurs sont invités à partager leurs idées sur <a href="https://groups.google.com/forum/#!forum/enseignement2-contributeurs" target="_blank" title="forum google où les contributeurs peuvent partager et débattre des idées sur la confection et l'amélioration des articles">ce forum</a>,
-comme montré dans <a href="http://youtu.be/nGjQGbBboss" target="_blank">cette vidéo</a>.
+<p>Les contributeurs sont invités à partager leurs idées sur <a href="https://groups.google.com/forum/#!forum/enseignement2-contributeurs" target="_blank" title="forum google où les contributeurs peuvent partager et débattre des idées sur la confection et l'amélioration des articles">ce forum</a>,
+comme montré dans <a href="http://youtu.be/nGjQGbBboss" target="_blank">cette vidéo</a>.</p>
 
 
-<img src="/images/flower.png" class="center-align"/>
+<div class="center-align"><img src="/images/flower.png" class="image-frame" /></div>
 
-<p><!-- This  empty paragraph is for the image shadow --></p>
 </body>
 </html>
