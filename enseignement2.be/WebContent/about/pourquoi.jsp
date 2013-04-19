@@ -9,20 +9,20 @@
 <body>
     <ryctag:pageheadertitle title="Pourquoi ce site?"></ryctag:pageheadertitle>
 <p>
-enseignement2.be veut montrer la voie vers une nouvelle version de l’enseignement dans notre pays. Une version améliorée qui fonctionnerait mieux. Beaucoup d'encre a coulé sur notre système d'enseignement et sur les modifications qu'il faut y apporter. Avec toutes <a href= "/book">ces publications dispersées</a>, iI nous semblait manquer une vision cohérente et complète de l'avenir souhaitable, avec <a href= "/action">la liste des prochaines actions à prendre</a> et ce qui empêche de les prendre.
+enseignement2.be veut montrer la voie vers une nouvelle version de l’enseignement dans notre pays. Une version améliorée qui fonctionnerait mieux. Beaucoup d'encre a coulé sur notre système d'enseignement et sur les modifications qu'il faut y apporter. Après lecture de <a href= "/book">ces diverses publications</a>, une vision cohérente et complète de l'avenir souhaitable nous semblait manquer, tout comme <a href= "/action">une liste des actions à entreprendre</a> et des obstacles à leur réalisation.
 </p>
 <p>
-Par ce site, nous voulons informer la population des problèmes qui minent notre système scolaire. Ce dernier est si difficile à comprendre, que même les professionnels de l’enseignement que nous avons rencontrés sont souvent bien ignorants des sous-domaines qui ne les concernent pas quotidiennement.
+Par ce site, nous voulons informer la population des problèmes qui minent notre système scolaire. Ce dernier est si difficile à comprendre que même les professionnels de l’enseignement que nous avons rencontrés sont souvent bien ignorants des sous-domaines qui ne les concernent pas quotidiennement.
 </p>
 <p>
 Or, nous pensons que tout est lié: démotivation, affectations, budget, autonomie, devoirs, échecs, formation des enseignants, autorité, réseaux, massification, compartimentage, etc.
-Le domaine est très vaste, comme en témoigne la liste des articles ci-contre. Toucher à l’une de ces matières, influe sur les autres. De loin, pour plupart des gens, cela parraît flou, alors on accable la fatalité: c’est à cause de la télévision; les jeunes ne sont plus comme avant; c’est l’immigration; c’est faute d’argent; et pourquoi pas à cause du climat... Pourtant il existe des causes nombreuses et précises sur lesquels on peut agir, et qui ne laissent que très peu de place à la fatalité. Par contre, en parler peut fâcher certains.
+Le domaine est très vaste, comme en témoigne la liste des articles ci-contre. Toucher à l’une de ces matières, influe sur les autres. De loin, pour plupart des gens, cela paraît flou, alors on accable la fatalité: c’est à cause de la télévision; les jeunes ne sont plus comme avant; c’est l’immigration; c’est faute d’argent; et pourquoi pas à cause du climat... Pourtant il existe des causes nombreuses et précises sur lesquelles on peut agir et qui ne laissent que très peu de place à la fatalité. Par contre, en parler peut fâcher certains.
 </p>
 <p>
-Depuis des années, la plupart des acteurs de l’enseignement (ministres, pouvoirs organisateurs, associations de parents, syndicats) évitent souvent le débat utile, celui qui (malheureusement) fâche. Lorsqu’on analyse leurs échanges dans les médias, ils aboutissent généralement, à “on aimerait bien faire ceci ou cela, mais on n’a pas assez d’argent”. Or, de l’argent, il y en a plus qu’assez dans l’enseignement Belge francophone. Il est <a href="/article/budget">mal utilisé</a>. Mais si on l’utilisait mieux, il faudrait en retirer à certains qui se sentiraient lésés. La conséquence est un immobilisme: comme on a peur de ce qui fâche, on se cantonne à décider sur les détails.
+Depuis des années, la plupart des acteurs de l’enseignement (ministres, pouvoirs organisateurs, associations de parents, syndicats) évitent souvent le débat utile, celui qui (malheureusement) fâche. Lorsqu’on analyse leurs échanges dans les médias, ils aboutissent généralement à “on aimerait bien faire ceci ou cela, mais on n’a pas assez d’argent”. Or, de l’argent, il y en a plus qu’assez dans l’enseignement belge francophone. Il est <a href="/article/budget">mal utilisé</a>, mais si on l’utilisait mieux, il faudrait en retirer à certains qui se sentiraient lésés. La conséquence est un immobilisme: comme on a peur de ce qui fâche, on se cantonne à décider sur les détails.
 </p>
 <p>
-Ce site a été créé pour susciter des débats utiles, porteurs de changements. Il structure l’information en 3 couches:
+Ce site a été créé pour susciter des débats utiles, porteurs de changements. Il structure l’information en trois couches:
 </p>
 <div class="center-align"><img src="/images/iceberg.jpg" class="image-frame" /></div>
 <p>
