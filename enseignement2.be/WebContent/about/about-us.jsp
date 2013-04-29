@@ -14,7 +14,7 @@
 <p>enseignement2.be est un site indépendant du politique et de l’administration.<br/>
 Le site officiel de l’Etat est “<a href= "http://www.enseignement.be/">enseignement <i>&ndash;tout-court&ndash;</i> .be”</a></p>
 
-<p>Je m'appelle <a href="http://aliaz.com/john-rizzo">John Rizzo</a> et j'ai fondé ce site pour aider notre système scolaire.</p>
+<p>Mon nom est <a href="http://aliaz.com/john-rizzo">John Rizzo</a> et j'ai fondé ce site pour aider notre système scolaire.</p>
 <p>Avec l'aide de quelques bénévoles, j'ai collecté la plupart des extraits, les ai classés par thème et ai rédigé les résumés des articles ainsi que les textes entre les extraits.
 Nous avons aussi créé la plate-forme informatique mettant ces textes à disposition sous forme de site web.</p>
  
