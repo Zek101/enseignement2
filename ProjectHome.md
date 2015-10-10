@@ -1,0 +1,1 @@
+This website's purpose is to give public opinion about the Education System in Belgium
